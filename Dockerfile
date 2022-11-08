@@ -8,7 +8,7 @@ COPY index.scss .
 
 RUN rustup target add wasm32-unknown-unknown && cargo install trunk
 
-RUN trunk build --release --public-url "lemmeknow-frontend" --filehash false
+RUN trunk build --release --filehash false
 
 FROM nginx:1-alpine
 WORKDIR /usr/share/nginx/html
